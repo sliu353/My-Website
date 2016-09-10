@@ -1,7 +1,56 @@
+body{
+	overflow: hidden;
+}
+
+.my-nav-bar{
+	position: fixed;
+	z-index: 20;
+justify-content: center;
+	display: flex;
+}
+
+.current-circle{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: white;
+	border: 2px solid white;
+	-moz-border-radius: 12.5px;
+	-webkit-border-radius: 12.5px;
+	border-radius: 12.5px;
+	z-index: 50
+}
+
+.nav-circular-div{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 2px solid white;
+	background: transparent;
+	-moz-border-radius: 12.5px;
+	-webkit-border-radius: 12.5px;
+	border-radius: 12.5px;
+	z-index: 50
+}
+
+.little-dot {
+    width: 8px;
+	height: 2px;
+	display: inline-block;
+	background: white;
+	align-self: center;
+	margin: 6px;
+}
+
 .navbar {
 	margin: 0;
 	border: 0;
 	color: #34AADC;
+}
+
+.navbar.hidden-xs{
+	z-index: 11;
+	background-color: white
 }
 
 .navbar-nav>li>a {
@@ -36,12 +85,23 @@
 }
 
 .section0{
-	background-image: url("background0.jpg");
+	background-image: url("background0.jpeg");
 	background-repeat: no-repeat;
+	left: 0;
+	right: 0;
+	z-index: 1
 }
 
-.section0 {
-	position: relative;
+.section1{
+	background-image: url("background1.jpeg");
+	background-repeat: no-repeat;
+	z-index: 2
+}
+
+.section{
+	position: fixed;
+	padding: 0;
+	background-size: cover;
 }
 
 .section0>.navbar{
@@ -54,7 +114,7 @@
 	margin: auto, auto, auto, 0;
 }
 
-.section0>.container {
+.section>.container {
     position: absolute;
     top: -15%;
     bottom: 0;
@@ -63,15 +123,40 @@
     width: 100%;
     height: 40%;
     margin: auto;
+	padding: 0;
 }
 
-.section0>div>h1, .section0>div>h2 {
+.section0>div>h1, .section0>div>h2, .section0>div>h3 {
 	text-align: center;
 	vertical-align: center;
 	font-family: 'Passion One', cursive;
 	color: white;
 }
 
+.section1>div>h1, .section1>div>h2, .section1>div>h3 {
+	text-align: center;
+	vertical-align: center;
+	font-family: 'Passion One', cursive;
+	color: white;
+}
+
+.my-photo{
+	margin: auto;
+	box-shadow: 0 3px 9px white;
+	display: block;
+	width: inherit
+}
+
+.section0>div>h3 {
+	font-style: italic;
+}
+
+.navbar-toggle{
+	position: fixed; 
+	top: 29px; 
+	right: 25px;
+	z-index: 12;
+}
 
 .navbar-toggle>.icon-bar{
 	background-color: white;
@@ -109,20 +194,20 @@
 	opacity:  0.95;
 }
 
-.navbar .hidden-xs{
-	z-index: 10px; 
-}
-
 
 @media (min-width: 1400px){
 	.section0{
+		background-size: cover;
+	}
+	
+	.section1{
 		background-size: cover;
 	}
 }
 
 @media (min-width: 993px){
 	.section0>div>h1 {
-		font-size: 121.6px;
+		font-size: 145.6px;
 	}
 
 	.section0>div>h2 {
@@ -144,6 +229,30 @@
 	}
 }
 
+@media (max-width: 767px){
+	.section0>div>h3 {
+		display: none;
+	}
+	
+	.section1>div>h1 {
+		font-size: 150px;
+		margin: -30px 5px 5px 5px;
+		
+	}
+	
+	.section1>div>h2 {
+		font-size: 35px;
+		margin: 5px;
+
+	}
+	
+	.my-photo{
+		width:  inherit;
+		width: 300px;
+		margin-top: -35px;
+	}
+}
+
 @media (min-width:768px) and (max-width:992px) {
     .navbar-brand {
 		font-size: 48px;
@@ -162,9 +271,13 @@
 	.section0>div>h1 {
 		font-size: 92px;
 	}
+	
+	.my-photo{
+		margin-top: -80px;
+	}
 }​
 
 .mobile-navbar{
 	position: fixed; 
-	z-index: 11
+	z-index: 11;
 }
