@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Liu Siyuan's portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Passion+One:400,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="myCSS.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="my-nav-bar">
+		<a id="circle0" class="current-circle btn" value="0" onclick="navOnclick(0)"></a>
+		<div class="little-dot"></div>
+		<div class="little-dot"></div>
+		<div class="little-dot"></div>
+		<a id="circle1" class="nav-circular-div btn" value="1" onclick="navOnclick(1)"></a>
+	</div>	
+	<div class="navbar-wrap hidden-sm hidden-md hidden-lg">
+		<div class="collapse navbar-collapse hidden-sm hidden-md hidden-lg" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Page 2</a></li>
+				<li><a href="#">Page 3</a></li>
+			</ul>
+		</div>
+	</div>	
+	<button type="button" class="navbar-toggle" onclick="navbarToggleOnClick()">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>                        
+	</button>
+	<!--
+	<nav class="navbar hidden-xs">
+		<div class="container">
+			<div class="collapse navbar-collapse">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Siyuan's Portfolio</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">WHO</a></li>
+					<li><a href="#">WHAT</a></li>
+					<li><a href="#">WHERE</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	-->
+	<div class="section container-fluid section0">
+		<div class="container">
+			<br>
+			<br>
+			<br>
+			<h2>Welcom to<h2>
+			<h1>Siyuan's Website</h1>
+			<br>
+			<h3>Built with HTML, CSS, JQuery and Bootstrap</h3>
+		</div>
+	</div>
+	<div class="section container-fluid section1">
+		<div class="container hidden-sm hidden-md hidden-lg">
+			<img src="Irving.jpeg" class="img-circle my-photo" alt="This is Siyuan's photo">
+			<br>
+			<h2>This is</h2>
+			<h1>me<h1>
+		</div>
+		<div class="hidden-xs container">
+			<div class="col-md-5 col-sm-12">
+				<img src="Irving.jpeg" class="img-circle my-photo" alt="This is Siyuan's photo">
+			</div>
+			
+		</div>
+	</div>
+	<script src="myJavascript.js"></script>
+</body>
+</html>
+
+
+
