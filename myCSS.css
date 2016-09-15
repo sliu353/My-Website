@@ -85,7 +85,7 @@ justify-content: center;
 }
 
 .section0{
-	background-image: url("background0.jpeg");
+	background-image: url("images/background0.jpeg");
 	background-repeat: no-repeat;
 	left: 0;
 	right: 0;
@@ -93,9 +93,15 @@ justify-content: center;
 }
 
 .section1{
-	background-image: url("background1.jpeg");
+	background-image: url("images/background1.jpeg");
 	background-repeat: no-repeat;
 	z-index: 2
+}
+
+.section2{
+	background-image: url("images/background2.jpg");
+	background-repeat: no-repeat;
+	z-index: 3
 }
 
 .section{
@@ -126,25 +132,63 @@ justify-content: center;
 	padding: 0;
 }
 
-.section0>div>h1, .section0>div>h2, .section0>div>h3 {
+.section2>.container{
+	top: -30%;
+}
+
+h1, h2, h3, h4 {
 	text-align: center;
 	vertical-align: center;
 	font-family: 'Passion One', cursive;
 	color: white;
 }
 
-.section1>div>h1, .section1>div>h2, .section1>div>h3 {
-	text-align: center;
+td{
+	vertical-align: top;
+	font-family: 'Passion One', cursive;
+	color: white;
+	padding: 5px;
+}
+
+.section0 > .container > h1, .section0 > .container > h2, .section0 > .container > h3 {
+	    text-shadow: 0 3px 9px #07E0F0;
+}
+
+.section1 > .container > div > h2  {
+	text-shadow: 0 3px 9px #7CF007;
+}
+
+.section2 > .container > h2 {
+	text-shadow: 0 3px 9px #f0f0f5;
+}
+
+table{
+	border-collapse:collapse;
+	margin: 15px;
+}
+
+td{
 	vertical-align: center;
 	font-family: 'Passion One', cursive;
 	color: white;
+	margin: 10px;
+	text-shadow: 0 3px 9px #7CF007;
+}
+
+.glyphicon-ok{
+	text-shadow: 0 3px 9px white;
+		color: #7CF007;
 }
 
 .my-photo{
 	margin: auto;
 	box-shadow: 0 3px 9px white;
 	display: block;
-	width: inherit
+}
+
+.skills-photo, .sm-skills-photo{
+	margin: auto;
+	display: block;
 }
 
 .section0>div>h3 {
@@ -203,24 +247,68 @@ justify-content: center;
 	.section1{
 		background-size: cover;
 	}
-}
-
-@media (min-width: 993px){
-	.section0>div>h1 {
+	
+	.section2{
+		background-size: cover;
+	}
+	
+	td{
+		font-size: 38px;
+	}
+	
+	h1 {
 		font-size: 145.6px;
 	}
 
-	.section0>div>h2 {
+	h2 {
 		font-size: 60.8px;
+	}
+	
+	.my-photo{
+		width: 80%;
+	}
+	
+	.skills-photo{
+		width: 70%;
+	}
+	
+	.photo-row{
+		margin: 2% 10%;
+	}
+}
+
+@media (min-width: 993px) and (max-width: 1399px){
+	h1 {
+		font-size: 145.6px;
+	}
+
+	h2 {
+		font-size: 60.8px;
+	}
+	
+	.my-photo, .skills-photo{
+		width: 100%;
+	}
+	
+	td{
+		font-size: 25px;
+	}
+	
+	.skills-photo{
+		width: 75%;
+	}
+	
+	.photo-row{
+		margin: 5% 10%;
 	}
 }
 
 @media (max-width: 991px){
-	.section0>div>h1 {
+	h1 {
 		font-size: 40px;
 	}
 
-	.section0>div>h2 {
+	h2 {
 		font-size: 40px;
 	}
 	
@@ -230,26 +318,33 @@ justify-content: center;
 }
 
 @media (max-width: 767px){
-	.section0>div>h3 {
+	h3 {
 		display: none;
 	}
 	
-	.section1>div>h1 {
-		font-size: 150px;
-		margin: -30px 5px 5px 5px;
+	h4 {
+		font-size: 100px;
+		margin-top: -20px;
+	}
+	
+	h1 {
+		font-size: 50px;
+		margin: 10px 5px 5px 5px;
 		
 	}
 	
-	.section1>div>h2 {
+	h2 {
 		font-size: 35px;
 		margin: 5px;
-
 	}
 	
 	.my-photo{
-		width:  inherit;
-		width: 300px;
+		width:  80%;
 		margin-top: -35px;
+	}
+	
+	.sm-skills-photo{
+		width: 60%;
 	}
 }
 
@@ -268,12 +363,38 @@ justify-content: center;
 		text-align: center;
 	}
 	
-	.section0>div>h1 {
+	h1 {
 		font-size: 92px;
+	}
+	
+	h2 {
+		font-size: 40px;
+		margin: 5px;
 	}
 	
 	.my-photo{
 		margin-top: -80px;
+		width: 50%;
+	}
+	
+	td{
+		font-size: 30px;
+	}
+	
+	.skills-photo{
+		width: 100%;
+	}
+	
+	.photo-row{
+		margin: 5% 3%;
+	}
+	
+	#left-carousel-control{
+		background-image: none !important;
+	}
+	
+	#right-carousel-control{
+		background-image: none !important;
 	}
 }​
 
