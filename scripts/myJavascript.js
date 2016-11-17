@@ -1,7 +1,7 @@
 var mobileScreenSize;
 var thisWindow = $(window);
 var scrollCounter = 0
-
+screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 
 $(function(){
 	$("body").bind('mousewheel', function(e){
