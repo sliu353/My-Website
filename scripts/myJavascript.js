@@ -78,7 +78,7 @@ function resizeSection0(){
 	$(".my-nav-bar").offset({top: 0.9 * windowHeight});
 	$(".my-nav-bar").width(windowWidth);
 	$(".skills-photo").height($(".skills-photo").width());
-	var standardHeight = $(".container").height() / 2;
+	var standardHeight = $(".section2>.container").height() / 2;
 	$(".skills-photo").each(
 		function(){
 			$(this).height(standardHeight);
