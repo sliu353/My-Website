@@ -21,7 +21,13 @@ $(function(){
 })
 */
 
+var visitSection2FirstTime = true;
+
 function navOnclick(number){
+	if (visitSection2FirstTime){
+		$(window).trigger('resize');
+		visitSection2FirstTime = false;
+	}
 	var currentCircle = $(".current-circle");
 	if (scrollCounter != number){
 		currentCircle.removeClass("current-circle");
@@ -120,13 +126,7 @@ function toSection1(){
 	navbarToggleOnClick()
 }
 
-var visitSection2FirstTime = true;
-
 function toSection2(){
-	if (visitSection2FirstTime){
-		$(window).trigger('resize');
-		visitSection2FirstTime = false;
-	}
 	navOnclick(2);
 	navbarToggleOnClick()
 }
