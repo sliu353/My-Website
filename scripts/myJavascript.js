@@ -1,8 +1,10 @@
 var mobileScreenSize;
 var thisWindow = $(window);
 var scrollCounter = 0
+
 screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 
+/*
 $(function(){
 	$("body").bind('mousewheel', function(e){
 		if(e.originalEvent.wheelDelta < 0 && scrollCounter < 1){
@@ -19,7 +21,7 @@ $(function(){
         interval: false
 	})
 })
-
+*/
 
 function navOnclick(number){
 	var currentCircle = $(".current-circle");
@@ -78,7 +80,7 @@ function resizeSection0(){
 	$(".my-nav-bar").offset({top: 0.9 * windowHeight});
 	$(".my-nav-bar").width(windowWidth);
 	$(".skills-photo").height($(".skills-photo").width());
-	var standardHeight = $(".section2>.container").height() / 2;
+	var standardHeight = $(".container").height() / 2;
 	$(".skills-photo").each(
 		function(){
 			$(this).height(standardHeight);
