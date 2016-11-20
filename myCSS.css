@@ -104,6 +104,14 @@ justify-content: center;
 	z-index: 3
 }
 
+#Section2Container{
+	bottom: 0 !important;
+	right: -33px;
+	overflow-y: scroll;
+	top: 0;
+	height: 60%;
+}
+
 .section{
 	position: fixed;
 	padding: 0;
@@ -340,7 +348,6 @@ td{
 	
 	.my-photo{
 		width:  80%;
-		margin-top: -35px;
 	}
 	
 	.sm-skills-photo{
@@ -373,7 +380,6 @@ td{
 	}
 	
 	.my-photo{
-		margin-top: -80px;
 		width: 50%;
 	}
 	
