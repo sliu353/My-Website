@@ -52,9 +52,7 @@ function navOnclick(number){
 
 $(function() {
 	$(".section:not(.section0)").offset({ top: 0, left: thisWindow.width()});
-	$(window).resize(function() {
 	resizeSection0();
-})
 });
 
 $(window).resize(function() {
