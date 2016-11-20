@@ -52,13 +52,8 @@ function navOnclick(number){
 
 $(function() {
 	$(".section:not(.section0)").offset({ top: 0, left: thisWindow.width()});
-	resizeSection0();
+	$(window).trigger('resize');
 });
-
-$(function(){
-	resizeSection0();	
-    }
-);
 
 $(window).resize(function() {
 	resizeSection0();
