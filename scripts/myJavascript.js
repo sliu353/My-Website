@@ -120,7 +120,13 @@ function toSection1(){
 	navbarToggleOnClick()
 }
 
+var visitSection2FirstTime = true;
+
 function toSection2(){
+	if (visitSection2FirstTime){
+		$(window).trigger('resize');
+		visitSection2FirstTime = false;
+	}
 	navOnclick(2);
 	navbarToggleOnClick()
 }
