@@ -89,7 +89,7 @@ justify-content: center;
 	background-repeat: no-repeat;
 	left: 0;
 	right: 0;
-	z-index: 1
+	z-index: 3
 }
 
 .section1{
@@ -101,7 +101,7 @@ justify-content: center;
 .section2{
 	background-image: url("images/background2.jpg");
 	background-repeat: no-repeat;
-	z-index: 3
+	z-index: 1
 }
 
 #Section2Container{
