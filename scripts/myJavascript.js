@@ -35,16 +35,16 @@ function navOnclick(number){
 		$("#circle" + number).addClass("current-circle");
 		$("#circle" + number).removeClass("nav-circular-div");
 		if (parseInt(currentCircle.attr("value")) < number){
-			$(".section" + number).animate({ "left": "-=" + $(".section0").width() });
-			scrollCounter++;
+			//$(".section" + number).animate({ "left": "-=" + $(".section0").width() });
+			//scrollCounter++;
 			var i;
 			for(i = parseInt(currentCircle.attr("value")) + 1; i < number; i++){
-				$(".section" + i).animate({ "left": "-=" + $(".section0").width() });
+				$(".section" + i).animate({ "left": "+=" + $(".section0").width() });
 				scrollCounter++;
 			}
 		} else {
-			for(i = number + 1; i <= parseInt(currentCircle.attr("value")); i++){
-				$(".section" + i).animate({ "left": "+=" + $(".section0").width() });
+			for(i = number + 1; i < parseInt(currentCircle.attr("value")); i++){
+				$(".section" + i).animate({ "left": "-=" + $(".section0").width() });
 				scrollCounter--;
 			}
 			/*
@@ -57,7 +57,7 @@ function navOnclick(number){
 }
 
 $(function() {
-	$(".section:not(.section0)").offset({ top: 0, left: thisWindow.width()});
+	//$(".section:not(.section0)").offset({ top: 0, left: thisWindow.width()});
 	$(window).trigger('resize');
 });
 
@@ -119,6 +119,7 @@ function navbarToggleOnClick(){
 function toSection0(){
 	navOnclick(0);
 	$(".navbar-wrap").hide("fast").find(".navbar-collapse").hide("fast");
+	navbarToggleOnClick()
 }
 
 function toSection1(){
