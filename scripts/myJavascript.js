@@ -71,9 +71,10 @@ function resizeSection0(){
 	$(".section0").height(windowHeight).width(windowWidth); 
 	$(".section1").height(windowHeight).width(windowWidth);
 	$(".section2").height(windowHeight).width(windowWidth);
-	for(var i = scrollCounter + 1; i <= 2; i++){
+	/*for(var i = scrollCounter + 1; i <= 2; i++){
 		$(".section" + i).offset({ top: 0, left: windowWidth });
 	}
+	*/
 	if(windowWidth < 767)
 	{
 		var navBar = $("#myNavbar");
