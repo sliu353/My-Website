@@ -38,12 +38,12 @@ function navOnclick(number){
 			//$(".section" + number).animate({ "left": "-=" + $(".section0").width() });
 			//scrollCounter++;
 			var i;
-			for(i = parseInt(currentCircle.attr("value")) + 1; i < number; i++){
+			for(i = parseInt(currentCircle.attr("value")); i < number; i++){
 				$(".section" + i).animate({ "left": "+=" + $(".section0").width() });
 				scrollCounter++;
 			}
-		} else {
-			for(i = number + 1; i < parseInt(currentCircle.attr("value")); i++){
+		} else if (parseInt(currentCircle.attr("value")) > number) {
+			for(i = number; i < parseInt(currentCircle.attr("value")); i++){
 				$(".section" + i).animate({ "left": "-=" + $(".section0").width() });
 				scrollCounter--;
 			}
